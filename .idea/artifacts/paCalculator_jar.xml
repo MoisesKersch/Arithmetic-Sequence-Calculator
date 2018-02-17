@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="paCalculator:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="paCalculator.jar">
+      <element id="module-output" name="paCalculator" />
+    </root>
+  </artifact>
+</component>

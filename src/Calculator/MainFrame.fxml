@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="#vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="554.0" stylesheets="@palette.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Calculator.FirstController">
+   <children>
+      <Pane prefHeight="37.0" prefWidth="600.0" style="-fx-background-color: #236863;">
+         <children>
+            <Text fill="#5d928e" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARITHMETIC SEQUENCE CALCULATOR" textAlignment="CENTER" wrappingWidth="537.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <HBox id="menubox" prefHeight="34.0" prefWidth="479.0">
+            <children>
+                <Label id="commondif" fx:id="labelcommondif" alignment="CENTER" onMouseClicked="#handle" prefHeight="30.0" prefWidth="135.0" text="COMON DIFFERENCE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" top="2.0" />
+               </HBox.margin></Label>
+                <Label id="gettermvalue" fx:id="gettermvalue" alignment="CENTER" onMouseClicked="#handle" prefHeight="30.0" prefWidth="135.0" text="GET TERM VALUE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+                <Label id="getsum" fx:id="getsum" alignment="CENTER" onMouseClicked="#handle" prefHeight="30.0" prefWidth="135.0" text="GET SUM">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label id="getsum" fx:id="about" alignment="CENTER" layoutY="12.0" onMouseClicked="#handle" prefHeight="30.0" prefWidth="135.0" text="ABOUT">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+           </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="5.0" right="4.0" />
+         </padding>
+      </HBox>
+      <Line endX="336.0" fill="#cbd6d5" layoutX="-21.0" startX="-217.0" stroke="#5d928e" strokeType="OUTSIDE" strokeWidth="0.5">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Line>
+      <HBox prefHeight="250.0" prefWidth="554.0">
+         <children>
+            <Pane prefHeight="221.0" prefWidth="328.0">
+               <children>
+                  <Text fx:id="result" fill="#ffffff7a" layoutX="197.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" wrappingWidth="78.99999746140975">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField id="number2" fx:id="number2" layoutX="72.0" layoutY="109.0" prefHeight="26.0" prefWidth="44.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField id="number1" fx:id="number1" layoutX="14.0" layoutY="109.0" prefHeight="26.0" prefWidth="44.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <Text fill="#cbd6d5" layoutX="6.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the first two values of your sequence:" textAlignment="RIGHT" wrappingWidth="292.0535891056061">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Text id="enterterm" fx:id="resultMessage" fill="#cbd6d5" layoutX="1.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:" textAlignment="RIGHT" wrappingWidth="186.00002796947956">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+                  <Button id="rich-blue" fx:id="calculate" layoutX="195.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="79.0" text="GET RESULT" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label fx:id="printoption" layoutX="83.0" layoutY="14.0" onMouseDragOver="#handle" prefHeight="20.0" prefWidth="240.0" text="Nothing Selected">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Text id="enterterm" fx:id="entertermmessage" fill="#cbd6d5" layoutX="6.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the term:" textAlignment="RIGHT" visible="false" wrappingWidth="104.39999420940876">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField id="term" fx:id="term" layoutX="114.0" layoutY="164.0" onAction="#handle" prefHeight="26.0" prefWidth="53.0" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <Label fx:id="printoption1" layoutX="15.0" layoutY="14.0" onMouseDragOver="#handle" prefHeight="20.0" prefWidth="68.0" text="Selected:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-21.0" layoutX="294.0" layoutY="246.0" startX="-98.0" stroke="#5d928e" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox id="menubox" prefHeight="34.0" prefWidth="479.0">
+         <children>
+            <Label id="commondif" fx:id="footer" alignment="CENTER" onMouseClicked="#handle" prefHeight="54.0" prefWidth="544.0" text="DEVELOPED BY ME :D">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="4.0" />
+         </padding>
+      </HBox>
+      <Line endX="336.0" fill="#cbd6d5" startX="-217.0" stroke="#5d928e" strokeType="OUTSIDE" strokeWidth="0.5" />
+   </children>
+</VBox>

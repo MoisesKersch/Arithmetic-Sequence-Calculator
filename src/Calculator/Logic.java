@@ -1,4 +1,4 @@
-package sample;
+package Calculator;
 
 import java.util.Vector;
 
