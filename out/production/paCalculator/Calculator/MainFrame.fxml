@@ -69,30 +69,26 @@
       </Line>
       <HBox prefHeight="250.0" prefWidth="554.0">
          <children>
-            <Pane prefHeight="221.0" prefWidth="328.0">
+            <Pane prefHeight="250.0" prefWidth="413.0">
                <children>
-                  <Text fx:id="result" fill="#ffffff7a" layoutX="197.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" wrappingWidth="78.99999746140975">
+                  <Text fx:id="result" fill="#ffffff7a" layoutX="196.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffffff;" wrappingWidth="204.80000712310732">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <TextField id="number2" fx:id="number2" layoutX="72.0" layoutY="109.0" prefHeight="26.0" prefWidth="44.0">
+                  <TextField id="setSequence" fx:id="setSequence" layoutX="14.0" layoutY="109.0" onAction="#handle" prefHeight="26.0" prefWidth="180.0" promptText="1,2,3,4...">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></TextField>
-                  <TextField id="number1" fx:id="number1" layoutX="14.0" layoutY="109.0" prefHeight="26.0" prefWidth="44.0">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font></TextField>
-                  <Text fill="#cbd6d5" layoutX="6.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the first two values of your sequence:" textAlignment="RIGHT" wrappingWidth="292.0535891056061">
+                  <Text fill="#cbd6d5" layoutX="11.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your sequence:" textAlignment="RIGHT" wrappingWidth="142.45360732078552">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></Text>
-                  <Text id="enterterm" fx:id="resultMessage" fill="#cbd6d5" layoutX="1.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:" textAlignment="RIGHT" wrappingWidth="186.00002796947956">
+                  <Text id="enterterm" fx:id="resultMessage" fill="#cbd6d5" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:" textAlignment="RIGHT" wrappingWidth="186.00002796947956">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></Text>
-                  <Button id="rich-blue" fx:id="calculate" layoutX="195.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="79.0" text="GET RESULT" textAlignment="RIGHT">
+                  <Button id="rich-blue" fx:id="calculate" layoutX="195.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onInputMethodTextChanged="#handle" prefHeight="31.0" prefWidth="79.0" text="GET RESULT" textAlignment="RIGHT">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
@@ -105,7 +101,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <TextField id="term" fx:id="term" layoutX="114.0" layoutY="164.0" onAction="#handle" prefHeight="26.0" prefWidth="53.0" visible="false">
+                  <TextField id="term" fx:id="term" layoutX="114.0" layoutY="164.0" onAction="#handle" prefHeight="26.0" prefWidth="53.0" promptText="1" visible="false">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></TextField>
@@ -114,14 +110,14 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Line endX="-21.0" layoutX="294.0" layoutY="246.0" startX="-98.0" stroke="#5d928e" />
+                  <Line endX="87.0" layoutX="294.0" layoutY="246.0" startX="-98.0" stroke="#5d928e" />
                </children>
             </Pane>
          </children>
       </HBox>
       <HBox id="menubox" prefHeight="34.0" prefWidth="479.0">
          <children>
-            <Label id="commondif" fx:id="footer" alignment="CENTER" onMouseClicked="#handle" prefHeight="54.0" prefWidth="544.0" text="DEVELOPED BY ME :D">
+            <Label id="footer" fx:id="footer" alignment="CENTER" onMouseClicked="#handle" prefHeight="54.0" prefWidth="544.0" text="SELECT AN OPTION TO START!!!">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -129,7 +125,7 @@
                   <Insets bottom="2.0" right="2.0" top="2.0" />
                </HBox.margin>
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
          </children>
