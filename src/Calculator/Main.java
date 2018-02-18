@@ -33,8 +33,6 @@ public class Main extends Application {
         primaryStage.setScene(scene1);
         primaryStage.setResizable(false);
         primaryStage.show();
-        System.out.println("from main "+ primaryStage);
-
     }
 
     public static void main(String[] args)

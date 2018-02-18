@@ -161,7 +161,6 @@ public class FirstController implements EventHandler<Event>
             {
                 result.setText("Invalid input!");
             }
-            logic.getSequence();
             logic.cleaner();
         }
     }
