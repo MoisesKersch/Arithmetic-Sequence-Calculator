@@ -30,6 +30,7 @@ public class FirstController implements EventHandler<Event>
     @FXML private TextField number1;
     @FXML private TextField number2;
     @FXML private TextField term;
+    @FXML private TextField setSequence;
 
     // output
     @FXML private Button calculate;
@@ -49,6 +50,7 @@ public class FirstController implements EventHandler<Event>
     public void mouseEvenHandler()
     {
         mouseevent = event;
+        term.setText("");
         if (event.getSource() == labelcommondif)
         {
             printoption.setText("Common Difference");
@@ -96,42 +98,73 @@ public class FirstController implements EventHandler<Event>
     {
         if (event.getSource() == calculate && mouseevent.getSource() == labelcommondif)
         {
-            try
+            if (logic.setSequence(setSequence.getText()))
             {
-                logic.add(Float.parseFloat(number1.getText()), Float.parseFloat(number2.getText()));
-                result.setText(Float.toString(logic.getCommonDiference()));
-            }catch (NumberFormatException e){
-                System.out.println("error message");
+                if (logic.hasCommonDifference())
+                {
+                    result.setText(Float.toString(logic.getCommonDiference()));
+                }
+                else
+                {
+                    result.setText("Invalid Common Difference!");
+                }
             }
-
+            else
+            {
+                result.setText("Invalid input!");
+            }
+            logic.cleaner();
         }
 
-        if (event.getSource() == calculate && mouseevent.getSource() == gettermvalue)
+        if (event.getSource() == calculate && mouseevent.getSource() == gettermvalue || (event.getSource() == setSequence && mouseevent.getSource() == gettermvalue))
         {
-            try
+            if (logic.setSequence(setSequence.getText()))
             {
-                logic.add(Float.parseFloat(number1.getText()), Float.parseFloat(number2.getText()));
-                logic.setTerm(Integer.parseInt(term.getText()));
-                result.setText(Float.toString(logic.getCertainTermValue()));
-            }catch (NumberFormatException e){
-                System.out.println("error message");
+                if (logic.hasCommonDifference())
+                {
+                    try
+                    {
+                        logic.setTerm(Integer.parseInt(term.getText()));
+                        result.setText(Float.toString(logic.getCertainTermValue()));
+                    }catch (NumberFormatException e){ result.setText("Invalid input!");}
+                }
+                else
+                {
+                    result.setText("Invalid Common Difference!");
+                }
             }
+            else
+            {
+                result.setText("Invalid input!");
+            }
+            logic.cleaner();
         }
 
-        if (event.getSource() == calculate && mouseevent.getSource() == getsum)
+        if (event.getSource() == calculate && mouseevent.getSource() == getsum || (event.getSource() == setSequence && mouseevent.getSource() == getsum))
         {
-            try
+            if (logic.setSequence(setSequence.getText()))
             {
-                logic.add(Float.parseFloat(number1.getText()), Float.parseFloat(number2.getText()));
-                logic.setTerm(Integer.parseInt(term.getText()));
-                resultMessage.setText(String.format("Sum all indexes 1 to %s:", logic.getTerm()));
-                result.setText(Float.toString(logic.getSum()));
-            }catch (NumberFormatException e){
-                System.out.println("error message");
+                if (logic.hasCommonDifference())
+                {
+                    try
+                    {
+                        logic.setTerm(Integer.parseInt(term.getText()));
+                        result.setText(Long.toString(logic.getSum()));
+                    }catch (NumberFormatException e){ result.setText("Invalid input!");}
+                }
+                else
+                {
+                    result.setText("Invalid Common Difference!");
+                }
             }
+            else
+            {
+                result.setText("Invalid input!");
+            }
+            logic.getSequence();
+            logic.cleaner();
         }
     }
-
 
     @Override
     public void handle(Event event)

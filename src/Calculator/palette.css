@@ -103,3 +103,9 @@
             linear-gradient(#5D928E, #5D928E),
             linear-gradient(#5D928E, #5D928E);
 }
+
+
+#footer
+{
+    -fx-background-color: darkColor;
+}

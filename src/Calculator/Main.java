@@ -29,7 +29,6 @@ public class Main extends Application {
         scene1 = new Scene(root);
         primaryStage.setTitle("Calculator");
         Image image = new Image("/Calculator/paicon.png");
-        
         primaryStage.getIcons().add(image);
         primaryStage.setScene(scene1);
         primaryStage.setResizable(false);
