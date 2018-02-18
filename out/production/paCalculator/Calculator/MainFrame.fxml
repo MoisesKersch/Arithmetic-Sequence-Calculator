@@ -88,7 +88,7 @@
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></Text>
-                  <Button id="rich-blue" fx:id="calculate" layoutX="195.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onInputMethodTextChanged="#handle" prefHeight="31.0" prefWidth="79.0" text="GET RESULT" textAlignment="RIGHT">
+                  <Button id="rich-blue" fx:id="calculate" layoutX="195.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="79.0" text="GET RESULT" textAlignment="RIGHT">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
@@ -96,12 +96,12 @@
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></Label>
-                  <Text id="enterterm" fx:id="entertermmessage" fill="#cbd6d5" layoutX="6.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the term:" textAlignment="RIGHT" visible="false" wrappingWidth="104.39999420940876">
+                  <Text id="enterterm" fx:id="entertermmessage" fill="#cbd6d5" layoutX="12.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the term:" textAlignment="RIGHT" wrappingWidth="104.39999420940876">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <TextField id="term" fx:id="term" layoutX="114.0" layoutY="164.0" onAction="#handle" prefHeight="26.0" prefWidth="53.0" promptText="1" visible="false">
+                  <TextField id="term" fx:id="term" layoutX="120.0" layoutY="164.0" onAction="#handle" prefHeight="26.0" prefWidth="55.0" promptText="1">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></TextField>
